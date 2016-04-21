@@ -1,0 +1,33 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Stay Udacious Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h3>Set a goal for your study (between 10 and 60 minutes):</h3>
+    <form>
+      <input type="number" name="timer" min="10" max="60"></input>
+      <input type="submit" value="Submit"></input>
+    </form>
+  </body>
+</html>
+
